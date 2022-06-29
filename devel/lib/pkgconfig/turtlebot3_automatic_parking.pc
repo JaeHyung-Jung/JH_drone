@@ -1,0 +1,8 @@
+prefix=/home/sb/catkin_ws/devel
+
+Name: turtlebot3_automatic_parking
+Description: Description of turtlebot3_automatic_parking
+Version: 1.1.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: rospy std_msgs sensor_msgs geometry_msgs nav_msgs
