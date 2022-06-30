@@ -1,1 +1,0 @@
-- https://shanepark.tistory.com/231 hangul
