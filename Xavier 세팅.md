@@ -4,9 +4,9 @@
 2) Ubuntu에 SDK Manager 설치 (Ubuntu version에 맞게 설치)
 3) SDK Manager 실행 $sdkmanager
 4) SDK Manager에서 NVIDIA login 후 Xavier에 OS flash, flash 후 install
-  4-1) SDK Manager에서 Manual setup으로 진행, recovery 버튼을 먼저 누르고있는 상태에서 power버튼 같이 2초정도 눌렀다가 떼기, Xavier에 인터넷연결(LAN or Wifi)하고 ifconfig통해 ip확인해서 ip, Xavier desktop id, pw 입력 => 설치 시작
-  4-2) https://jstar0525.tistory.com/58 (설치 참고 링크)
-  4-3) 설치 후 Xavier에서 설치 완료 확인 
+4-1) SDK Manager에서 Manual setup으로 진행, recovery 버튼을 먼저 누르고있는 상태에서 power버튼 같이 2초정도 눌렀다가 떼기, Xavier에 인터넷연결(LAN or Wifi)하고 ifconfig통해 ip확인해서 ip, Xavier desktop id, pw 입력 => 설치 시작
+4-2) https://jstar0525.tistory.com/58 (설치 참고 링크)
+4-3) 설치 후 Xavier에서 설치 완료 확인 
     $ cd ~/VisionWorks-SFM-0.90-Samples
     $ ./bin/aarch64/linux/release/nvx_sample_sfm
     $ nvcc -V
