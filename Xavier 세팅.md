@@ -12,7 +12,7 @@
     -   $ nvcc -V
 
 5) Xavier 자동실행 확인
-  - 자동부팅 참고링크 : https://blog.naver.com/PostView.naver?blogId=hdh7485&logNo=221915486713&parentCategoryNo=&categoryNo=69&viewDate=&isShowPopularPosts=false&from=postView
+    - 자동부팅 참고링크 : https://blog.naver.com/PostView.naverblogId=hdh7485&logNo=221915486713&parentCategoryNo=&categoryNo=69&viewDate=&isShowPopularPosts=false&from=postView
 
 6) Usb Port고정
 7) Usb 속도제한 해제
