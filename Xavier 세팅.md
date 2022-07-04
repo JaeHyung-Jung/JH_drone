@@ -12,7 +12,7 @@
     -   $ nvcc -V
 
 5) Xavier 자동실행 확인
-    - 자동부팅 참고링크 : https://blog.naver.com/PostView.naverblogId=hdh7485&logNo=221915486713&parentCategoryNo=&categoryNo=69&viewDate=&isShowPopularPosts=false&from=postView
+    - 자동부팅 참고링크( : https://blog.naver.com/PostView.naver?blogId=hdh7485&logNo=221915486713&parentCategoryNo=&categoryNo=69&viewDate=&isShowPopularPosts=false&from=postView
     - 자동 부팅후 ROSCORE 자동실행 :
     https://dhpark1212.tistory.com/entry/JetsonNano-%EB%B6%80%ED%8C%85-%EC%8B%9C-%EC%9E%90%EB%8F%99-%EC%8B%A4%ED%96%89-%EB%B0%A9%EB%B2%95
 
