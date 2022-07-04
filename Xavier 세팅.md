@@ -11,6 +11,10 @@
     -   $ ./bin/aarch64/linux/release/nvx_sample_sfm
     -   $ nvcc -V
     -   설치 완료확인 됐으면 xavier 업데이트 ($ sudo apt-get update && sudo apt-get upgrade)
+4-1) ROS설치
+    - ROS설치과정에서 sudo apt update에서 오류가 나거나 sudo apt-get install ros-noetic-(.. 생략)에서 package가 없다는 오류가 발생한다. 이 경우 
+        - 1) sudo apt --fix borken install -o Dpkg::Options::="--force overwrite" => fix broken 안될경우
+        - or 2) $ sudo sed -i -e 's|disco|focal|g' /etc/apt/sources.list , $ sudo apt update
 5) Xavier 자동실행 확인
     - 자동부팅 참고링크( : https://blog.naver.com/PostView.naver?blogId=hdh7485&logNo=221915486713&parentCategoryNo=&categoryNo=69&viewDate=&isShowPopularPosts=false&from=postView
     - 자동 부팅후 ROSCORE 자동실행 :
