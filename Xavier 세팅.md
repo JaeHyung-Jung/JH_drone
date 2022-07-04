@@ -10,7 +10,7 @@
     -   $ cd ~/VisionWorks-SFM-0.90-Samples
     -   $ ./bin/aarch64/linux/release/nvx_sample_sfm
     -   $ nvcc -V
-
+    -   설치 완료확인 됐으면 xavier 업데이트 ($ sudo apt-get update && sudo apt-get upgrade)
 5) Xavier 자동실행 확인
     - 자동부팅 참고링크( : https://blog.naver.com/PostView.naver?blogId=hdh7485&logNo=221915486713&parentCategoryNo=&categoryNo=69&viewDate=&isShowPopularPosts=false&from=postView
     - 자동 부팅후 ROSCORE 자동실행 :
