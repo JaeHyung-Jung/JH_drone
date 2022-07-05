@@ -1,0 +1,14 @@
+1. Xavier Installation (version X)
+   - ROS Noetic (Melodic : Python2, Noetic : Python3)
+   - MAVROS (Binary X, Source O)
+   - Pixhawk connection with Xavier
+     (rostopic echo /mavros/status --> connection : true)
+   - USB Port symbolic link
+   - autostart (자동실행) --> Through Mavros
+   - Opencv Source Build (above 4), (gstreamer)
+   - Velodyne and IMU with ROS
+
+   
+   
+   
+   
