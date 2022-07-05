@@ -23,7 +23,7 @@
         - 1) sudo apt --fix borken install -o Dpkg::Options::="--force overwrite" => fix broken 안될경우
         - or 2) $ sudo sed -i -e 's|disco|focal|g' /etc/apt/sources.list , $ sudo apt update
 
-5) Mavros source 설치 및 Ros와 연결
+5) Mavros source 설치 및 Ros와 연결(mavlink. mavros, geographic lib설치)
 
 
         sudo apt-get install python-catkin-tools python-rosinstall-generator -y
