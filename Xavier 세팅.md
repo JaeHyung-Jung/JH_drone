@@ -1,3 +1,4 @@
+* Xavier를 직접설치하는 과정에서 작성하여서 두서가없음. 추후 다시 정리할예정
 * 필요한 것들 : USB젠더, 키보드.마우스, Xavier 파워선, Usb(C to USB), HDMI 선
 
 1) Ubuntu PC(Host)와 Xavier연결, Xavier 파워 연결하고 키보드마우스, 모니터 연결
