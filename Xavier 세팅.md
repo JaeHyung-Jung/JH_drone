@@ -1,6 +1,7 @@
 * Xavier를 직접설치하는 과정에서 작성하여서 두서가없음. 추후 다시 정리할예정
 * 필요한 것들 : USB젠더, 키보드.마우스, Xavier 파워선, Usb(C to USB), HDMI 선
 
++) option : 한글설치 (https://velog.io/@ddubbu/%EC%9A%B0%EB%B6%84%ED%88%AC-20.04-%ED%95%9C%EA%B8%80-%EC%9E%85%EB%A0%A5-%EB%B0%A9%EB%B2%95-feat.-fcitx)
 1) Ubuntu PC(Host)와 Xavier연결, Xavier 파워 연결하고 키보드마우스, 모니터 연결
 2) Ubuntu에 SDK Manager 설치 (Ubuntu version에 맞게 설치)
 3) SDK Manager 실행 $sdkmanager
