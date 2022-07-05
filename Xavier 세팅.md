@@ -24,8 +24,47 @@
         - or 2) $ sudo sed -i -e 's|disco|focal|g' /etc/apt/sources.list , $ sudo apt update
 
 5) Mavros source 설치 및 Ros와 연결
-6) Pixhawk와 Xavier 연결
-7) Xavier부팅 후 자동실행(rc.rocal, init.d, system중 하나 사용) 설정
+
+
+    sudo apt-get install python-catkin-tools python-rosinstall-generator -y
+# For Noetic use that:
+# sudo apt install python3-catkin-tools python3-rosinstall-generator python3-osrf-pycommon -y
+
+# 1. Create the workspace: unneeded if you already has workspace
+mkdir -p ~/catkin_ws/src
+cd ~/catkin_ws
+catkin init
+wstool init src
+
+# 2. Install MAVLink
+#    we use the Kinetic reference for all ROS distros as it's not distro-specific and up to date
+rosinstall_generator --rosdistro kinetic mavlink | tee /tmp/mavros.rosinstall
+
+# 3. Install MAVROS: get source (upstream - released)
+rosinstall_generator --upstream mavros | tee -a /tmp/mavros.rosinstall
+# alternative: latest source
+# rosinstall_generator --upstream-development mavros | tee -a /tmp/mavros.rosinstall
+# For fetching all the dependencies into your catkin_ws, just add '--deps' to the above scripts
+# ex: rosinstall_generator --upstream mavros --deps | tee -a /tmp/mavros.rosinstall
+
+# 4. Create workspace & deps
+wstool merge -t src /tmp/mavros.rosinstall
+wstool update -t src -j4
+rosdep install --from-paths src --ignore-src -y
+
+# 5. Install GeographicLib datasets:
+./src/mavros/mavros/scripts/install_geographiclib_datasets.sh
+
+# 6. Build source
+catkin build
+
+# 7. Make sure that you use setup.bash or setup.zsh from workspace.
+#    Else rosrun can't find nodes from this workspace.
+source devel/setup.bash
+
+
+7) Pixhawk와 Xavier 연결
+8) Xavier부팅 후 자동실행(rc.rocal, init.d, system중 하나 사용) 설정
     - 자동부팅 참고링크( : https://blog.naver.com/PostView.naver?blogId=hdh7485&logNo=221915486713&parentCategoryNo=&categoryNo=69&viewDate=&isShowPopularPosts=false&from=postView
     - 자동 부팅후 ROSCORE 자동실행 :
         - https://dhpark1212.tistory.com/entry/JetsonNano-%EB%B6%80%ED%8C%85-%EC%8B%9C-%EC%9E%90%EB%8F%99-%EC%8B%A4%ED%96%89-%EB%B0%A9%EB%B2%95
