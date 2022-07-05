@@ -1,19 +1,15 @@
 ### Nvidia SDK Manager를 통해 Xavier OS설치 및 mavros, pixhawk, IMU, Lidar연결 with ROS
+---
 
 <em> test_em </em> <br>
 <strong> test_strong </strong> <br>
 
-* Xavier, Host PC(Ubuntu) 연결시 필요한 것들 : USB젠더, 키보드.마우스, Xavier 파워선, Usb(C to USB), HDMI 선
-
-+) option : 한글, terminator, chrome
-
-    - 한글설치 (https://velog.io/@ddubbu/%EC%9A%B0%EB%B6%84%ED%88%AC-20.04-%ED%95%9C%EA%B8%80-%EC%9E%85%EB%A0%A5-%EB%B0%A9%EB%B2%95-feat.-fcitx)
-    - terminator 설치 : $ sudo apt-get install terminator
-    - chrome 설치 : $ sudo apt-get install chromium-browser
+- Xavier, Host PC(Ubuntu) 연결시 필요한 것들 : USB젠더, 키보드.마우스, Xavier 파워선, Usb(C to USB), HDMI 선
     
-1) Host PC(Host)와 Xavier연결, Xavier 파워 연결하고 키보드마우스, 모니터 연결
-2) Host PC에 SDK Manager 설치 1.8 version(Download Link:https://developer.nvidia.com/nvidia-sdk-manager)
-3) SDK Manager 실행 $ sdkmanager
+<ol>
+    1. Host PC(Host)와 Xavier연결, Xavier 파워 연결하고 키보드마우스, 모니터 연결
+    1. Host PC에 SDK Manager 설치 1.8 version(Download Link:https://developer.nvidia.com/nvidia-sdk-manager)
+    1. SDK Manager 실행 $ sdkmanager
 4) SDK Manager에서 NVIDIA login 후 Xavier에 OS flash, flash 후 install
     - SDK Manager에서 Manual setup으로 진행, recovery 버튼을 먼저 누르고있는 상태에서 power버튼 같이 2초정도 눌렀다가 떼기, Xavier에 인터넷연결(LAN or Wifi)하고 ifconfig통해 ip확인해서 ip, Xavier id, pw 입력 => 설치 시작
     - https://jstar0525.tistory.com/58 (설치 참고 링크)
@@ -21,6 +17,12 @@
     -   $ cd ~/VisionWorks-SFM-0.90-Samples,   $ ./bin/aarch64/linux/release/nvx_sample_sfm (xavier base visionwork check)
     -   $ nvcc -V (cuda version check)
     -   설치 완료확인 됐으면 xavier 업데이트 ($ sudo apt-get update && sudo apt-get upgrade)
+    + option) : 
+        - 한글설치 (https://velog.io/@ddubbu/%EC%9A%B0%EB%B6%84%ED%88%AC-20.04-%ED%95%9C%EA%B8%80-%EC%9E%85%EB%A0%A5-%EB%B0%A9%EB%B2%95-feat.-fcitx)
+        - terminator install : $ apt install terminator
+        - chrome browser 설치 : $ apt install chromium-browser
+
+</ol>
 4-1) ROS설치 (Reference Link : http://wiki.ros.org/noetic/Installation/Ubuntu)
     - 
     
