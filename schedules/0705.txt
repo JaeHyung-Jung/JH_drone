@@ -1,0 +1,22 @@
+1. Xavier Installation (version X)
+   - ROS Noetic (Melodic : Python2, Noetic : Python3)
+   - MAVROS (Binary X, Source O) !! caution : do not use catkin_make, use catkin build 
+                                              (because mavlink uses metapackages, so it won't be available with catkin_make)
+   - Pixhawk connection with Xavier 
+   	- Qgroundcontrol 설치, Qgc에서 ardupilot 설치
+   	- ttyUSB0의 권한 부여 ( $ sudo chmod 666 /dev/ttyUSB0) => 임시방법
+   	- roslaunch mavros apm.launch
+     (rostopic echo /mavros/status --> connection : true)
+   - USB Port symbolic link (고정할때 권한 부여) or tty group에 싹다 권한을 주는방법(xavier tty permission denied 검색)
+   - autostart (자동실행) --> Through Mavros
+   - Opencv Source Build (above 4), (gstreamer)
+   - Velodyne and IMU with ROS
+
+   - GCS : qgroundcontroll, missionplanner(only run in windows) 
+   
+   
+*부록(07.05 배운거) : 
+	- pixhawk와 xavier 연결선(USB TO TTL) 납땜방법
+	- mavros설치 후 catkin build로 build해야함
+	- pixhawk와 ROS연결 후 roslaunch mavros apm.launch => state 및 rostopic 확인
+	- 
