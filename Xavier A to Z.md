@@ -21,7 +21,7 @@
         - terminator install : $ apt install terminator
         - chrome browser 설치 : $ apt install chromium-browser
 
-4-1) SSD 설치(option) : https://semotube.tistory.com/98
+4-1) SSD 설치(option) : https://semotube.tistory.com/98 <br>
 4-2) ROS설치 (Reference Link : http://wiki.ros.org/noetic/Installation/Ubuntu)
     - 
     
