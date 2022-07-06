@@ -22,12 +22,12 @@
         - chrome browser 설치 : $ apt install chromium-browser
 
 4-1) SSD 설치(option) : https://semotube.tistory.com/98 <br>
-4-2) ROS설치 (Reference Link : http://wiki.ros.org/noetic/Installation/Ubuntu)
-    - Troubleshooting (ROS설치 
-    '''python
+4-2) ROS설치 (Reference Link : http://wiki.ros.org/noetic/Installation/Ubuntu) <br>
+    - Troubleshooting (ROS설치 Package가 없다고 하는 경우) <br>
+    ```python
          1) sudo apt --fix borken install -o Dpkg::Options::="--force overwrite" => fix broken 안될경우
          or 2) $ sudo sed -i -e 's|disco|focal|g' /etc/apt/sources.list , $ sudo apt update
-    '''
+    ```
 
 
 5) Mavros source 설치 및 Ros와 연결(mavlink. mavros, geographic lib설치)
