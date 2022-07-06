@@ -23,11 +23,12 @@
 
 4-1) SSD 설치(option) : https://semotube.tistory.com/98 <br>
 4-2) ROS설치 (Reference Link : http://wiki.ros.org/noetic/Installation/Ubuntu)
-    - 
-    
-    - ROS설치과정에서 sudo apt update에서 오류가 나거나 sudo apt-get install ros-noetic-(.. 생략)에서 package가 없다는 오류가 발생한다. 이 경우 
-        - 1) sudo apt --fix borken install -o Dpkg::Options::="--force overwrite" => fix broken 안될경우
-        - or 2) $ sudo sed -i -e 's|disco|focal|g' /etc/apt/sources.list , $ sudo apt update
+    - Troubleshooting (ROS설치 
+    '''python
+         1) sudo apt --fix borken install -o Dpkg::Options::="--force overwrite" => fix broken 안될경우
+         or 2) $ sudo sed -i -e 's|disco|focal|g' /etc/apt/sources.list , $ sudo apt update
+    '''
+
 
 5) Mavros source 설치 및 Ros와 연결(mavlink. mavros, geographic lib설치)
 
