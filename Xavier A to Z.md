@@ -25,7 +25,7 @@
 4-2) ROS설치 (Reference Link : http://wiki.ros.org/noetic/Installation/Ubuntu) <br>
     - Troubleshooting (ROS설치 Package가 없다고 하는 경우) <br>
     ```python
-         1) sudo apt --fix borken install -o Dpkg::Options::="--force overwrite" => fix broken 안될경우
+         1) sudo apt --fix borken install -o Dpkg::Options::="--force overwrite" => fix broken 안될경우 <br>
          or 2) $ sudo sed -i -e 's|disco|focal|g' /etc/apt/sources.list , $ sudo apt update
     ```
 
