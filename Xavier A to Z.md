@@ -78,7 +78,7 @@
         - https://ahnbk.com/?p=1329
 
 8) Usb Port고정
-    - USB 포트고정(Raspberry pi : https://jinoan.com/raspberry_pi/2020-08-06-Raspberry-Pi-3-B+-USB-%ED%8F%AC%ED%8A%B8-%EA%B3%A0%EC%A0%95/)
+    - USB 포트고정(https://his-story.tistory.com/205)
 
 8-1) Usb 속도제한 해제
 9) Lidar, IMU를 ROS와 연결
