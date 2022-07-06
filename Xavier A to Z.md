@@ -95,7 +95,8 @@
         5) $ sudo systemctl start ~.service
         6) 상태확인 : $ sudo systemctl status ~.service
 
-        ```trouble shooting
+        ```
+        <strong> Trobleshooting </strong>
         $ sudo systemctl start rc-local.service => failed to start /etc/rc.local compatibility
         ```
 
