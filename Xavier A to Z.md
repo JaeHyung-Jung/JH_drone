@@ -98,6 +98,9 @@
         ```
         <Trobleshooting> 
         $ sudo systemctl start rc-local.service => failed to start /etc/rc.local compatibility
+        
+        => sudo gedit /etc/rc.local
+        마지막줄에 'exit 0' 추가
         ```
 
 8) Usb Port고정
