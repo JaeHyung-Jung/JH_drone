@@ -6,10 +6,10 @@
 
 - Xavier, Host PC(Ubuntu) 연결시 필요한 것들 : USB젠더, 키보드.마우스, Xavier 파워선, Usb(C to USB), HDMI 선
     
-<ol> 1. Host PC(Host)와 Xavier연결, Xavier 파워 연결하고 키보드마우스, 모니터 연결 
-     1. Host PC에 SDK Manager 설치 1.8 version(Download Link:https://developer.nvidia.com/nvidia-sdk-manager) </ol>
-    1. SDK Manager 실행 $ sdkmanager
-4) SDK Manager에서 NVIDIA login 후 Xavier에 OS flash, flash 후 install
+1. Host PC(Host)와 Xavier연결, Xavier 파워 연결하고 키보드마우스, 모니터 연결 
+2. Host PC에 SDK Manager 설치 1.8 version(Download Link:https://developer.nvidia.com/nvidia-sdk-manager) 
+3. SDK Manager 실행 $ sdkmanager
+4. SDK Manager에서 NVIDIA login 후 Xavier에 OS flash, flash 후 install
     - SDK Manager에서 Manual setup으로 진행, recovery 버튼을 먼저 누르고있는 상태에서 power버튼 같이 2초정도 눌렀다가 떼기, Xavier에 인터넷연결(LAN or Wifi)하고 ifconfig통해 ip확인해서 ip, Xavier id, pw 입력 => 설치 시작
     - https://jstar0525.tistory.com/58 (설치 참고 링크)
     - 설치 후 Xavier에서 설치 완료 확인 
@@ -21,8 +21,8 @@
         - terminator install : $ apt install terminator
         - chrome browser 설치 : $ apt install chromium-browser
 
-
-4-1) ROS설치 (Reference Link : http://wiki.ros.org/noetic/Installation/Ubuntu)
+4-1) SSD 설치(option) : https://semotube.tistory.com/98
+4-2) ROS설치 (Reference Link : http://wiki.ros.org/noetic/Installation/Ubuntu)
     - 
     
     - ROS설치과정에서 sudo apt update에서 오류가 나거나 sudo apt-get install ros-noetic-(.. 생략)에서 package가 없다는 오류가 발생한다. 이 경우 
