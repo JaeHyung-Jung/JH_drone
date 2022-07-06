@@ -73,9 +73,31 @@
 7) Pixhawk와 Xavier 연결
 8) Xavier부팅 후 자동실행(rc.rocal, init.d, system중 하나 사용) 설정
     - 자동부팅 참고링크( : https://blog.naver.com/PostView.naver?blogId=hdh7485&logNo=221915486713&parentCategoryNo=&categoryNo=69&viewDate=&isShowPopularPosts=false&from=postView
-    - 자동 부팅후 ROSCORE 자동실행 :
-        - https://dhpark1212.tistory.com/entry/JetsonNano-%EB%B6%80%ED%8C%85-%EC%8B%9C-%EC%9E%90%EB%8F%99-%EC%8B%A4%ED%96%89-%EB%B0%A9%EB%B2%95
-        - https://ahnbk.com/?p=1329
+    - rc.local을 이용한 자동실행
+        1) /etc하위 디렉터리 원하는 장소에 rc.local 파일 생성 $ sudo gedit /etc/rc.local
+        ```
+        #! /bin/bash
+        
+        source ~/.bashrc
+        
+        sleep 3
+        
+        roslaunch package_name launchfile_name option
+        ```
+        
+        2) cd /lib/systemd/system && sudo gedit rc-local.service
+        ```
+        rc-local.service 내용 (수정예정)
+        ```
+
+        3) $ sudo systemctl daemon-reload 
+        4) $ sudo sytemctl enable ~.service
+        5) $ sudo systemctl start ~.service
+        6) 상태확인 : $ sudo systemctl status ~.service
+
+        ```trouble shooting
+        $ sudo systemctl start rc-local.service => failed to start /etc/rc.local compatibility
+        ```
 
 8) Usb Port고정
     - USB 포트고정(https://his-story.tistory.com/205)
