@@ -80,5 +80,7 @@
 8) Usb Port고정
     - USB 포트고정(https://his-story.tistory.com/205)
 
-8-1) Usb 속도제한 해제
-9) Lidar, IMU를 ROS와 연결
+9) Opencv 4이상 버젼 설치 (with gstreamer) 후 build
+    - 참고링크 : https://github.com/jetsonhacks/buildOpenCVXavier
+    
+11) Lidar, IMU를 ROS와 연결
