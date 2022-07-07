@@ -108,5 +108,6 @@
 
 9) Opencv 4이상 버젼 설치 (with gstreamer) 후 build
     - 참고링크 : https://github.com/jetsonhacks/buildOpenCVXavier
+    - https://forums.developer.nvidia.com/t/installing-opencv4-on-xavier-solved/65436
     
 11) Lidar, IMU를 ROS와 연결
