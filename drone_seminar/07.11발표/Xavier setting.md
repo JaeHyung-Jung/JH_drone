@@ -128,6 +128,7 @@ $ source devel/setup.bash
 - need lists : pixhawk, USB gender hub, USB to TTL usb 
 1) insert USB to TTL line in 'telem2' port
 2) connect pixhawk and xavier through usb hub
+
 3) check the connection with command
 ```
 $ ls /dev/tty*
@@ -165,6 +166,13 @@ sleep 3
 roslaunch mavros apm.launch fcu_url:=/dev/ttypixhawk &
 ```
 The '&'mark behind ttypixhawk means launch that file in background.
+
+3) give authority to execute rc.local file
+```
+$ sudo chmod +x rc.local
+```
+    - chmod +rwx (r : read, w : write, x : execute)
+4) 
 
 ### USB devide fix
 
