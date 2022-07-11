@@ -310,7 +310,8 @@ $ sudo ldconfig
 ```
 python3 /usr/local/share/opencv4/samples/python/facedetect.py --cascade "/usr/local/share/opencv4/haarcascades/haarcascade_frontalface_alt.xml" --nested-cascade "/usr/local/share/opencv4/haarcascades/haarcascade_eye_tree_eyeglasses.xml" /dev/video0
 ```
-![image](https://user-images.githubusercontent.com/79160507/178194152-3663652d-30c6-43ac-8eb3-711412a04d90.png)
+![178194113-50f3c137-16b6-41b6-b953-48fcf58ec5cc](https://user-images.githubusercontent.com/79160507/178194296-b2e620fb-2d82-4ec9-b30f-53ee72ff8ab2.gif)
+
 
 ### Lidar connect & install + build
 
