@@ -11,15 +11,15 @@
 - [x] 8) Lidar & IMU 연결 및 설치 (ref : velodyne ros wiki)
 
 ### * Drone schedule(JH, LD ~ 10.1)	
-    - (~7.11) Xavier Setting
-    - (~7.11~7.X) ROS custom package create(input image.cpp, manipulation.cpp)
-    - (7.X ~ 8.1) Simulation env Setting 
-      - Xavier : Rospkg, Mavros, Ardupilot, Opencv
-      - TF : URDF(depth, stereo, lidar, IMU, gps) + camera module
-      - Joint Link + Joint state publisher
-      - map + baseLink ?? 이거뭐임
-      - Lidar 처음부터 구성
-    - (8.1~10.1) 
-      - ROS pkg custom create(.cpp)
-      - SLAM(Lom, Lego, Vision, Lidar, ...) 논문 및 코드 분석
-      - Drone simulator + SLAM 
+- [x] (~7.11) Xavier Setting
+- [ ] (~7.11~7.X) ROS custom package create(input image.cpp, manipulation.cpp)
+- [ ] (7.X ~ 8.1) Simulation env Setting 
+    - Xavier : Rospkg, Mavros, Ardupilot, Opencv
+    - TF : URDF(depth, stereo, lidar, IMU, gps) + camera module
+    - Joint Link + Joint state publisher
+    - map + baseLink ?? 이거뭐임
+    - Lidar 처음부터 구성
+- [ ] (8.1~10.1) 
+    - ROS pkg custom create(.cpp)
+    - SLAM(Lom, Lego, Vision, Lidar, ...) 논문 및 코드 분석
+    - Drone simulator + SLAM 
