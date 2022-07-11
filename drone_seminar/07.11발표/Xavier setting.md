@@ -4,7 +4,7 @@
 ### Xavier OS install with SDK Manager
 1) Install SDK Manager(1.8) on Host(Ubuntu) PC 
 
-    - DownloadLink : [NVIDIA SDK Manager](developer.nvidia.com/nvidia-sdk-manager)
+    - DownloadLink : [NVIDIA SDK Manager](https://developer.nvidia.com/nvidia-sdk-manager)
     - Need Nvidia deloper account
 
 2) 
