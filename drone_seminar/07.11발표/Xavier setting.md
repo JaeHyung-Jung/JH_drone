@@ -259,7 +259,7 @@ $ sudo apt-get purge libopencv* python-opencv
 ```
 $ sudo apt-get update
 $ sudo apt-get upgrade
-
+```
 3) cmake package install, install libraries and tools
 ```
 $ sudo apt-get install build-essential cmake
