@@ -18,7 +18,14 @@
 ---
 
 ### SSD install
-1) 
+1) Power off the Xavier and Open the board.
+    ![image](https://user-images.githubusercontent.com/79160507/178179045-10194f13-67db-495a-87e8-4b012804f06d.png)
+    - image reference : https://medium.com/@ramin.nabati/installing-an-nvme-ssd-drive-on-nvidia-jetson-xavier-37183c948978
+2) Insert SSD on board
+    ![image](htdisktps://user-images.githubusercontent.com/79160507/178179153-92c2c2be-dc24-4c8a-b32b-7f18f18122a9.png)
+3) Disk Format with Gnome GUI & Set partition(16GB) for swap files
+    ![image](https://user-images.githubusercontent.com/79160507/178179574-bf3e8cb7-5146-4683-9841-cefff19dd87b.png)
+4) 
 
 ### Ros noetic install on Xavier
 
