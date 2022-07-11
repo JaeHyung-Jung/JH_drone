@@ -243,9 +243,10 @@ if you want to give authority to device, edit like below
 ```
 SUBSYSTEM=="tty", MODE=="0666" ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", ATTRS{serial}=="your_serial", SYMLINK+="tty_name"
 ```
-with text above, You have give authority and made a symbolic link which acts like a device name. 
-I have set the symlink as "ttypixhawk" as seen like below
+You have give authority and made a symbolic link which acts like a device name. 
 ![image](https://user-images.githubusercontent.com/79160507/178192200-317b0342-8275-4083-8a76-a4138bc08a66.png)
+I have set the symlink as "ttypixhawk" as seen like below
+
 
 ### Opencv install & build
 
