@@ -12,8 +12,8 @@
 
 ### * Drone schedule(JH, LD ~ 10.1)	
 - [x] (~7.11) Xavier Setting
-- [ ] (~7.11~7.X) ROS custom package create(input image.cpp, manipulation.cpp)
-- [ ] (7.X ~ 8.1) Simulation env Setting 
+- [ ] (7.11~7.n) ROS custom package create(input image.cpp, manipulation.cpp)
+- [ ] (7.n ~ 8.1) Simulation env Setting 
     - Xavier : Rospkg, Mavros, Ardupilot, Opencv
     - TF : URDF(depth, stereo, lidar, IMU, gps) + camera module
     - Joint Link + Joint state publisher
