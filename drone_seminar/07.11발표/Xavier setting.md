@@ -314,6 +314,39 @@ python3 /usr/local/share/opencv4/samples/python/facedetect.py --cascade "/usr/lo
 
 
 ### Lidar connect & install + build
+1) Insert power to Lidar and connect lidar & xiaver with ethernet LAN  
+![lidar_connection](https://user-images.githubusercontent.com/79160507/178194613-cd267a66-72d0-4535-bc24-6514fb0f0558.jpg)
+
+2) When insert ethernet line, there will be network setting added.
+3) Edit the IPv4 settings like below
+![image](https://user-images.githubusercontent.com/79160507/178194691-63055e82-8931-41a6-9354-387d62c56602.png)
+4) Open web browser and get to adress : 192.168.1.201 to check the connection
+![image](https://user-images.githubusercontent.com/79160507/178194812-d314dab8-b2a3-4129-be8b-8cd644ddeea7.png)
+5) install ROS dependencies
+```
+$ sudo apt-get install ros-VERSION-velodyne
+```
+6) install VLP16 driver
+```
+$ cd ~/catkin_ws/src/ && git clone https://github.com/ros-drivers/velodyne.git
+$ rosdep install --from-paths src --ignore-src --rosdistro YOURDISTRO -y
+$ cd ~/catkin_ws/ && catkin build
+```
+7) Run rviz to visualize the Pointcloud data
+```
+$ roslaunch velodyne_pointcloud VLP16_points.launch
+$ rosnode list
+$ rostopic echo /velodyne_points
+$ rosrun rviz rviz -f velodyne
+```
+
+##### Lidar connect Troubleshooting
+if Lidar ip connection doesn't work, replace the USB Hub or Lidar device or Ethernet Lan line.
+Troubleshooting reference : http://wiki.ros.org/velodyne/Tutorials/Getting%20Started%20with%20the%20Velodyne%20VLP16
+
+
+
+
 
 ### Options
 
