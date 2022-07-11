@@ -125,8 +125,46 @@ $ source devel/setup.bash
 ```
 ---
 ### Connect pixhawk and Xavier
+- need lists : pixhawk, USB gender hub, USB to TTL usb 
+1) insert USB to TTL line in 'telem2' port
+2) connect pixhawk and xavier through usb hub
+3) check the connection with command
+```
+$ ls /dev/tty*
+```
 
-### Roslaunch autorun with rc.local
+### Roslaunch autostart with rc.local
+- there are many ways to set autostarting : Contrap, rc.local, bashrc, init.d, systemd and we will use rc.local
+
+1) go to /etc directory & make rc.local file
+```
+$ cd /etc
+$ sudo gedit rc.local
+```
+2) edit rc.local 
+The format of rc.local is like below
+```
+#! /bin/bash
+
+source ~/.bashrc
+
+sleep 3
+
+roslaunch packge_name launchfile_name.launch
+```
+If you want to run apm.launch, rc.local will be like this
+```
+#! /bin/bash
+
+source ~/.bashrc
+source /opt/ros/noeitc/setup.bash
+source /home/jh/catkin_ws/devel/setup.bash
+
+sleep 3
+
+roslaunch mavros apm.launch fcu_url:=/dev/ttypixhawk &
+```
+The '&'mark behind ttypixhawk means launch that file in background.
 
 ### USB devide fix
 
