@@ -339,7 +339,8 @@ $ rosnode list
 $ rostopic echo /velodyne_points
 $ rosrun rviz rviz -f velodyne
 ```
-![image](https://user-images.githubusercontent.com/79160507/178195721-5b1232da-dc1e-4ef9-91bd-53bf5ffaae06.png)
+![lidar_running](https://user-images.githubusercontent.com/79160507/178195759-e6112397-7502-4190-8d38-00623af905f1.gif)
+
 
 
 ##### Lidar connect Troubleshooting
