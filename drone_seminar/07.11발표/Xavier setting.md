@@ -15,6 +15,7 @@
     - 2step : Check ("I accept the terms and conditions of the license agreements."), leave ("Download now. Install later")
     - 3step : select Manual Setup, check the IPv4 on Xavier, Set the Username and Password of Xavier
     - 4step : after install, finish.
+---
 
 ### SSD install
 
