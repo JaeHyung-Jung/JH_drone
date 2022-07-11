@@ -41,9 +41,50 @@ $ ./setup-service.sh
 ### Ros noetic install on Xavier
 1) setup sources.list
 ```
-sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+$ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
 ```
-
+2) setup keys
+```
+$ sudo apt install curl # if you haven't already installed curl 
+curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
+```
+3) install ros after apt update
+```
+$ sudo apt update
+$ sudo apt install ros-noetic-desktop-full
+4) Environment setup
+```
+$ source /opt/ros/noetic/setup.bash
+```
+5) Get dependencies for building packages
+```
+$ sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential
+```
+6) intialize rosdep & rosdep update
+```
+$ sudo apt install python3-rosdep
+$ sudo rosdep init
+$ rosdep update
+```
+7) Create ros workspace
+```
+$ mkdir -p ~/catkin_ws/src
+$ cd ~/catkin_ws
+$ catkin_make or catkin build (Recommend catkin build)
+```
+8) Source workspace package
+```
+in directory :d $ /home/usr/catkin_ws
+$ source devel/setup.bash
+```
+9) Edit bashrc
+```
+$ sudo gedit ~/.bashrc (gedit, nano, vim, vi, ... any editor)
+Add two lines in bashrc
+source /opt/ros/noetic/setup.bash
+source /home/jh/catkin_ws/devel/setup.bash
+```
+---
 ### Mavros install on Xavier
 
 ### Connect pixhawk and Xavier
