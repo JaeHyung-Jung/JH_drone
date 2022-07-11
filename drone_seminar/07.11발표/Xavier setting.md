@@ -165,14 +165,57 @@ sleep 3
 
 roslaunch mavros apm.launch fcu_url:=/dev/ttypixhawk &
 ```
-The '&'mark behind ttypixhawk means launch that file in background.
+_The '&'mark behind ttypixhawk means launch that file in background._
 
 3) give authority to execute rc.local file
 ```
 $ sudo chmod +x rc.local
 ```
-    - chmod +rwx (r : read, w : write, x : execute)
-4) 
+_chmod +rwx (r : read, w : write, x : execute)_
+
+4) edit service file
+```
+$ cd /lib/systemd/system
+$ sudo gedit rc-local.service
+```
+In rc-local.service
+```
+Description=/etc/rc.local Compatibility
+Documentation=man:systemd-rc-local-generator(8)
+ConditionFileIsExecutable=/etc/rc.local
+After=network.target
+
+[Service]
+Type=forking
+ExecStart=/etc/rc.local start
+TimeoutSec=0
+RemainAfterExit=yes
+GuessMainPID=no
+
+[Install]
+WantedBy=multi-user.target
+```
+5) activate service file with systemctl
+```
+$ sudo systemctl enable rc-local.service
+$ sudo systemctl start rc-local.service
+$ sudo systemctl status rc-local.service // check 
+```
+![image](https://user-images.githubusercontent.com/79160507/178189719-e21ee181-a304-4780-a521-628d7dce1ca1.png)
+If the service get activated with green circle, it's finished.
+
+6) reboot
+
++) trouble shooting
+    if rc-local.service doesn't get active, edit the rc.local in /etc and restart rc-local.service
+    ```
+    1) edit rc.local
+    2) $ sudo systemctl stop rc-local.service
+    3) $ sudo systemctl daemon-reload
+    4) $ sudo systemctl start rc-local.service
+    5) $ sudo systemctl status rc-local.service
+
+    ```
 
 ### USB devide fix
 
