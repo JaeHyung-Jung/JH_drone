@@ -1,17 +1,17 @@
 # Drone schedules
 
 ### * Xavier Setting (~7.11)
- [x] 1) SDK Manager를 통해 Xavier 설치
- [x] 2) ROS Noetic 설치 on Xavier
- [x] 3) Mavros 설치 on Xavier
- [x] 4) Pixhawk와 Xavier연결
- [x] 5) roslaunch 자동실행
- [x] 6) USB devide 고정 (dev ID 입력, symbolic link 생성, 권한부여)
- [x] 7) Opencv install & build
- [x] 8) Lidar & IMU 연결 및 설치 (ref : velodyne ros wiki)
+- [x] 1) SDK Manager를 통해 Xavier 설치
+- [x] 2) ROS Noetic 설치 on Xavier
+- [x] 3) Mavros 설치 on Xavier
+- [x] 4) Pixhawk와 Xavier연결
+- [x] 5) roslaunch 자동실행
+- [x] 6) USB devide 고정 (dev ID 입력, symbolic link 생성, 권한부여)
+- [x] 7) Opencv install & build
+- [x] 8) Lidar & IMU 연결 및 설치 (ref : velodyne ros wiki)
 
-### * Drone schedule(JH, LD)	
-    - [x] (~7.11) Xavier Setting
+### * Drone schedule(JH, LD ~ 10.1)	
+    - (~7.11) Xavier Setting
     - (~7.11~7.X) ROS custom package create(input image.cpp, manipulation.cpp)
     - (7.X ~ 8.1) Simulation env Setting 
       - Xavier : Rospkg, Mavros, Ardupilot, Opencv
