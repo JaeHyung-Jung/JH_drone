@@ -18,6 +18,7 @@
 ---
 
 ### SSD install
+1) 
 
 ### Ros noetic install on Xavier
 
@@ -32,3 +33,8 @@
 ### Opencv install & build
 
 ### Lidar connect & install + build
+
+### Options
+    - Hangul install : [Reference](https://velog.io/@ddubbu/%EC%9A%B0%EB%B6%84%ED%88%AC-20.04-%ED%95%9C%EA%B8%80-%EC%9E%85%EB%A0%A5-%EB%B0%A9%EB%B2%95-feat.-fcitx)
+    - Terminator install : $ apt install terminator
+    - Chrome browser install : $
