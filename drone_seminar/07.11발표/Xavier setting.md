@@ -249,7 +249,7 @@ You have give authority and made a symbolic link which acts like a device name.
 <br>
 I have set the symlink as "ttypixhawk" as seen like below
 
-
+---
 ### Opencv install & build
 1) if opencv is installed, remove it becuase it can cause trouble
 ```
