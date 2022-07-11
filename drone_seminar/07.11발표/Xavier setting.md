@@ -339,14 +339,12 @@ $ rosnode list
 $ rostopic echo /velodyne_points
 $ rosrun rviz rviz -f velodyne
 ```
+![image](https://user-images.githubusercontent.com/79160507/178195721-5b1232da-dc1e-4ef9-91bd-53bf5ffaae06.png)
+
 
 ##### Lidar connect Troubleshooting
-if Lidar ip connection doesn't work, replace the USB Hub or Lidar device or Ethernet Lan line.
-Troubleshooting reference : http://wiki.ros.org/velodyne/Tutorials/Getting%20Started%20with%20the%20Velodyne%20VLP16
-
-
-
-
+        If Lidar ip connection doesn't work, replace the USB Hub or Lidar device or Ethernet Lan line.
+        Troubleshooting reference : http://wiki.ros.org/velodyne/Tutorials/Getting%20Started%20with%20the%20Velodyne%20VLP16
 
 ### Options
 
