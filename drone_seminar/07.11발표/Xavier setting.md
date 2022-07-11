@@ -202,22 +202,48 @@ $ sudo systemctl start rc-local.service
 $ sudo systemctl status rc-local.service // check 
 ```
 ![image](https://user-images.githubusercontent.com/79160507/178189719-e21ee181-a304-4780-a521-628d7dce1ca1.png)
-If the service get activated with green circle, it's finished.
+
+`If the service get activated with green circle, it's finished.`
 
 6) reboot
 
-+) trouble shooting
-    if rc-local.service doesn't get active, edit the rc.local in /etc and restart rc-local.service
-    ```
-    1) edit rc.local
-    2) $ sudo systemctl stop rc-local.service
-    3) $ sudo systemctl daemon-reload
-    4) $ sudo systemctl start rc-local.service
-    5) $ sudo systemctl status rc-local.service
+##### +) rc.local, service trouble shooting
+if rc-local.service doesn't get active, edit the rc.local in /etc and restart rc-local.service
+```
+1) edit rc.local
+2) $ sudo systemctl stop rc-local.service
+3) $ sudo systemctl daemon-reload
+4) $ sudo systemctl start rc-local.service
+5) $ sudo systemctl status rc-local.service
+```
 
-    ```
-
+---
 ### USB devide fix
+before fix the device, firstable you should connect the usb device to Xavier.
+1) check the Vender ID and Product ID with command below
+```
+$ lsusb
+```
+2) find the serial name of usb device
+```
+$ udevadm info -a -n /dev/ttyUSB* | grep '{serial}' | head -n1
+``` 
+![image](https://user-images.githubusercontent.com/79160507/178190649-d4952067-24ba-4826-b228-b7ff1b3e2686.png)
+
+3) Now we know the vender id, product id, serial of device. Let's make rules to fix the device
+```
+$ cd /etc/udev/rules.d
+$ sudo gedit 99-usb-serial-rules
+```
+99-usb-serial-rules format : 
+```
+SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", ATTRS{serial}=="your_serial", SYMLINK+="tty_name"
+```
+if you want to give authority to device, edit like below
+```
+SUBSYSTEM=="tty", MODE=="0666" ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", ATTRS{serial}=="your_serial", SYMLINK+="tty_name"
+```
+with text above, You have give authority and made a symbolic link which acts like a device name. 
 
 ### Opencv install & build
 
