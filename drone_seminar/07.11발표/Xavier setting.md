@@ -206,8 +206,6 @@ $ sudo systemctl status rc-local.service // check
 `If the service get activated with green circle, it's finished.`
 
 6) reboot
-I have set the symlink as "ttypixhawk" as seen like below
-![image](https://user-images.githubusercontent.com/79160507/178192200-317b0342-8275-4083-8a76-a4138bc08a66.png)
 
 ##### +) rc.local, service trouble shooting
 if rc-local.service doesn't get active, edit the rc.local in /etc and restart rc-local.service
@@ -246,6 +244,8 @@ if you want to give authority to device, edit like below
 SUBSYSTEM=="tty", MODE=="0666" ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", ATTRS{serial}=="your_serial", SYMLINK+="tty_name"
 ```
 with text above, You have give authority and made a symbolic link which acts like a device name. 
+I have set the symlink as "ttypixhawk" as seen like below
+![image](https://user-images.githubusercontent.com/79160507/178192200-317b0342-8275-4083-8a76-a4138bc08a66.png)
 
 ### Opencv install & build
 
