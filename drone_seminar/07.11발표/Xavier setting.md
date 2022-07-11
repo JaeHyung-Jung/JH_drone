@@ -123,7 +123,7 @@ $  ./src/mavros/mavros/scripts/install_geographiclib_datasets.sh
 $ catkin build
 $ source devel/setup.bash
 ```
-        - reference : https://docs.px4.io/main/ko/ros/mavros_installation.html
+        reference : https://docs.px4.io/main/ko/ros/mavros_installation.html
 ---
 ### Connect pixhawk and Xavier
 - need lists : pixhawk, USB gender hub, USB to TTL usb 
