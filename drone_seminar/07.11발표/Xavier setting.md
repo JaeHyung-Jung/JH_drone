@@ -206,6 +206,8 @@ $ sudo systemctl status rc-local.service // check
 `If the service get activated with green circle, it's finished.`
 
 6) reboot
+I have set the symlink as "ttypixhawk" as seen like below
+![image](https://user-images.githubusercontent.com/79160507/178192200-317b0342-8275-4083-8a76-a4138bc08a66.png)
 
 ##### +) rc.local, service trouble shooting
 if rc-local.service doesn't get active, edit the rc.local in /etc and restart rc-local.service
